@@ -1,7 +1,7 @@
 <template>
 
     <div class="painel">
-        <h2 class="painel-titulo" @dblclick="visivel = !visivel" >{{ titulo }}</h2>
+        <h2 class="painel-titulo" @dblclick="visivel = !visivel" >{{ titulo }} </h2>
         <transition name="painel-fade">
             <div v-show="visivel" class="painel-conteudo">
                 <slot></slot>
@@ -45,6 +45,10 @@
         padding: 10px;
         text-transform: uppercase;
    }
+
+    .painel-conteudo {
+        overflow: hidden;
+    }
 
    *  {
      box-shadow: 5px 5px 5px;
